@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task2</title>
+</head>
+<body>
+    <center>
+        <h1>Alphabetical Order</h1>
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString">
+        <button onclick="sortString()">Sort</button>
+        <p id="sortedString"></p>
+        <!-- <p>Sorted string: <span id="sortedString"></span></p> -->
+    </center>
+
+    <script>
+        function sortString() {
+            var inputElement = document.getElementById("inputString");
+            var inputString = inputElement.value;
+            var sortedString = inputString.split('').sort().join('');
+            var sortedStringElement = document.getElementById("sortedString");
+            sortedStringElement.textContent = sortedString;
+        }
+    </script>
+</body>
+</html>
